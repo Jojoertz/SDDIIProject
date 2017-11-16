@@ -2,7 +2,15 @@
 
 \subsubsection{La génération par contrainte}\label{subsub:ConstGen}
 
-\nameref{ConsGen} ==> ref au label (sera clicable)
+\nameref{subsub:ConsGen} ==> ref au label (sera clicable)
+
+--------------------------------------------------------------
+
+\section{La génération par contrainte}\label{sec:ConstGen}
+
+\nameref{sec:ConsGen} ==> ref au label (sera clicable)
+
+--------------------------------------------------------------
 
 \textbf{GRAS}
 
