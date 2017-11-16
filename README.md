@@ -17,3 +17,5 @@
 \it{italique}
 
 \underline{souligné}
+
+\textsubscript{l} ==> Mettre en indice le texte
