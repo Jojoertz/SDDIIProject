@@ -1,0 +1,98 @@
+\documentclass[]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+
+\usepackage{hyperref}
+\usepackage{nameref}
+
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{lscape}
+\usepackage{wrapfig}
+\usepackage{rotating}
+
+\usepackage{fullpage}
+
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{fixltx2e}
+
+\definecolor{darkblue}{rgb}{0.0,0.0,0.6}
+\definecolor{darkred}{rgb}{0.3,0.0,0.0}
+
+\lstset{%
+	breaklines=true,
+	columns=fullflexible,
+	showstringspaces=false
+}
+
+\lstdefinelanguage{XML}
+{%
+	morestring=[b]",
+	morestring=[s]{>}{<},
+	morestring=[s]{"}{"},
+	moredelim=[s][\color{black}]{>}{<},
+	stringstyle=\color{darkred},
+	identifierstyle=\color{purple},
+	keywordstyle=\color{darkblue},
+	morekeywords={number, name, difficulty, maxTime, dependency, width, height, xPos, yPos, rotation, canBeMoved, canBeRotated}
+}
+
+\begin{document}
+
+\title{Rapport d'analyse\\
+	Projet de structures de données II\\
+	\smallskip
+	{\small Activité d'Apprentissage \textsf{S-INFO-020}}\\
+}
+\author{
+Membres du groupe:\\
+LABEEUW Dorian (\texttt{dorian.labeeuw@student.umons.ac.be}) \and JOERTZ Jonathan (\texttt{jonathan.joertz@student.umons.ac.be})}
+
+\date{Année Académique 2017-2018\\
+Bachelier en Sciences Informatiques Bloc 3\\ 
+\vspace{1cm}
+Faculté des Sciences, Université de Mons}
+
+\maketitle
+
+\medskip
+\begin{center} \today \end{center}
+	\begin{abstract}
+		Ce \emph{rapport d'analyse} est rendu dans le cadre de l'AA \textsf{S-INFO-020} ``Projet de structures de données II", dispensé par le professeur \emph{Bruyère Véronique} en année académique 2017-2018.
+	\end{abstract}
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\section{Description des structures de données}\label{sec:mainDesc}
+\subsection{Description de \mathscr{Q}}\label{sub:mainQDesc}
+\subsubsection{Description}\label{subsub:QDesc}
+\subsubsection{Exemple}\label{subsub:QEx}
+\subsubsection{Ordre sous-jacent}\label{subsub:QOrd}
+\subsection{Description de \mathscr{T}}\label{sub:mainTDesc}
+\subsubsection{Description}\label{subsub:TDesc}
+\subsubsection{Exemple}\label{subsub:TEx}
+\subsubsection{Ordre sous-jacent}\label{subsub:TOrd}
+
+\section{Explication des algorithmes présentés}\label{sec:algos}
+\subsection{Explication de \emph{FindIntersections(S)}}\label{sub:findInter}
+\subsection{Explication de \emph{HandleEventPoint(p)}}\label{sub:eventPoint}
+\subsection{Explication de \emph{FindNewEvent(s\textsubscript{l}, s\textsubscript{r}, p)}}\label{sub:findNew}
+
+\section{Gestion des cas particuliers}\label{sec:part}
+\subsection{Gestion des segments horizontaux}\label{sub:horiz}
+\subsection{Gestion des points d'intersection à au moins 3 segments}\label{sub:interSeg}
+
+\section{Description des étapes du programme}\label{sec:prog}
+%ATTENTION À MENTIONNER LES STRUCTURES UTILISÉES!!!
+
+\end{document}
