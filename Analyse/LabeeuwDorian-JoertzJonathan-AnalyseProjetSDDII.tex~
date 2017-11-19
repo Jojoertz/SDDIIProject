@@ -7,9 +7,7 @@
 \usepackage{hyperref}
 \usepackage{nameref}
 
-\usepackage{mathtools}
-\usepackage{mathrsfs}
-
+\usepackage{rsfso}
 
 \usepackage{graphicx}
 \usepackage{float}
