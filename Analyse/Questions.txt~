@@ -1,0 +1,13 @@
+Q:
+-Opération suppression qui retire le prochain event et le retourne (l'event est
+le plus haut en-dessous de la sweep line)
+-Savoir quel event est le plus haut : La plus petite coordonnée Y (plus grande que celle de la sweep line) et si 2 event ont le même Y
+alors c'est le X le plus petit.
+-Segments horizontaux : traités de la même façon donc point gauche passe avant point droit
+-2 events peuvent se trouver au même point, ce point devra n'être traité qu'une fois
+-Opération insertion qui insère correctement un event (càd ordonné selon l'ordre fourni) et qui n'insère pas si l'event est déjà présent
+-On stocke dans un noeud le point p + chaque segment commençant en p
+-Compléxité des 2 algos en log(m), m=nbre données
+
+T:
+

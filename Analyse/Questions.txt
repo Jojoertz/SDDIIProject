@@ -1,0 +1,19 @@
+Q:
+-Opération suppression qui retire le prochain event et le retourne (l'event est
+le plus haut en-dessous de la sweep line)
+-Savoir quel event est le plus haut : La plus petite coordonnée Y (plus grande que celle de la sweep line) et si 2 event ont le même Y
+alors c'est le X le plus petit.
+-Segments horizontaux : traités de la même façon donc point gauche passe avant point droit
+-2 events peuvent se trouver au même point, ce point devra n'être traité qu'une fois
+-Opération insertion qui insère correctement un event (càd ordonné selon l'ordre fourni) et qui n'insère pas si l'event est déjà présent
+-On stocke dans un noeud le point p + chaque segment commençant en p
+-Compléxité des 2 algos en log(m), m=nbre données
+
+T:
+-Donne les segments en train d'être intersectés par la sweep line dans l'ordre.
+-Utilisée pour savoir qui sont les voisins d'un segment afin de tester l'intersection
+-Structure dynamique car si n'intersecte plus, retirer de la structure ==> Insertion, suppression
+-Arbre de recherche binaire balancé
+-Nos données ordonnées sont stockées dans les feuilles, et on conserve dans chaque noeud intérieur l'élément le plus à droite dans le sous-arbre gauche. (les données des noeuds intérieurs doivent être considérées comme des aides pour retrouver les feuilles et non comme des valeurs).
+-Recherche du segment à droite d'un point event p : À chaque noeud intérieur v on teste si le point p se trouve à droite ou à gauche et on va dans le sous-arbre en conséquence du résultat. Si on arrive à une feuille, le segment à droite est soit cette feuille, soit celle à gauche.
+-Complexité log(n) où n est le nombre de segments qui intersecte la sweep line.
