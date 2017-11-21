@@ -87,6 +87,9 @@ Dans le cadre de ce projet, nous devons comprendre et implémenter une solution 
             \paragraph{} Le nombre de noeuds de \mathscr{Q} est plus petit que $s + i$ où s est le nombre de segments et i le nombre d'intersections. Ceci est le pire cas, en effet, ce cas-là apparait si tous les \emph{upper endpoints} (points de début des segments) sont au-dessus de la sweep line, si aucun \emph{lower endpoint} n'est au-dessus d'elle et si chaque segment ne croise que ses voisins et pas les segments plus loin.
         \subsubsection{Exemple}\label{subsub:QEx}
         
+            \begin{center}
+            \includegraphics[width=15cm]{ExempleQPng}
+            \end{center}
         \subsubsection{Ordre sous-jacent}\label{subsub:QOrd}
             \paragraph{} L'ordre est défini par le symbole $\prec$. Supposons que p et q sont deux points d'évènement. Alors on a $p \prec q \leftrightarrow (p\textsubscript{y} > q\textsubscript{y}) \vee (p\textsubscript{y} = q\textsubscript{y} \wedge p\textsubscript{x} < q\textsubscript{x})$.
             \paragraph{} Le cas particulier des \emph{segments horizontaux} se gère sans ajout particulier. En effet, le point gauche du segment sera considéré comme devant celui de droite.
@@ -95,7 +98,9 @@ Dans le cadre de ce projet, nous devons comprendre et implémenter une solution 
         \subsubsection{Description}\label{subsub:TDesc}
         
         \subsubsection{Exemple}\label{subsub:TEx}
-        
+            \begin{center}
+            \includegraphics[width=15cm]{ExempleTPng}
+            \end{center}
         \subsubsection{Ordre sous-jacent}\label{subsub:TOrd}
 
 \section{Explication des algorithmes présentés}\label{sec:algos}

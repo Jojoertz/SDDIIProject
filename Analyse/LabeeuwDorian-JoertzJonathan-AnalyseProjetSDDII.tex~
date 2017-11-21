@@ -80,22 +80,27 @@ Dans le cadre de ce projet, nous devons comprendre et implémenter une solution 
 \section{Description des structures de données}\label{sec:mainDesc}
     \subsection{Description de \mathcal{Q}}\label{sub:mainQDesc}
         \subsubsection{Description}\label{subsub:QDesc}
-            \paragraph \mathscr{Q} est une \emph{event queue} stockée dans un arbre binaire de recherche balancé sans doublons dont l'ordre correspond à un \nameref{subsub:QOrd} défini plus loin. Les éléments stockés dans un noeud de \mathscr{Q} sont un point d'évènement et tous les segments commençant en ce point. 
-            \paragraph Les 3 opérations que \mathscr{Q} doit supporter sont la suppression, la recherche du minimum et l'insertion sans doublons.
-            \paragraph \mathscr{Q} sera sans doublons car on ne veut traiter qu'une seule fois un point d'évènement.
-            \paragraph La complexité des algorithmes d'insertion et de suppression (et par extension de recherche) peuvent et doivent être implémentés en O(log(m)) où m est le nombre de noeuds présents dans \mathscr{Q}.
+            \paragraph{} \mathscr{Q} est une \emph{event queue} stockée dans un arbre binaire de recherche balancé sans doublons dont l'ordre correspond à un \nameref{subsub:QOrd} défini plus loin. Les éléments stockés dans un noeud de \mathscr{Q} sont un point d'évènement et tous les segments commençant en ce point. 
+            \paragraph{} Les 3 opérations que \mathscr{Q} doit supporter sont la suppression, la recherche du minimum et l'insertion sans doublons.
+            \paragraph{} \mathscr{Q} sera sans doublons car on ne veut traiter qu'une seule fois un point d'évènement.
+            \paragraph{} La complexité des algorithmes d'insertion et de suppression (et par extension de recherche) peuvent et doivent être implémentés en O(log(m)) où m est le nombre de noeuds présents dans \mathscr{Q}.
             \paragraph{} Le nombre de noeuds de \mathscr{Q} est plus petit que $s + i$ où s est le nombre de segments et i le nombre d'intersections. Ceci est le pire cas, en effet, ce cas-là apparait si tous les \emph{upper endpoints} (points de début des segments) sont au-dessus de la sweep line, si aucun \emph{lower endpoint} n'est au-dessus d'elle et si chaque segment ne croise que ses voisins et pas les segments plus loin.
         \subsubsection{Exemple}\label{subsub:QEx}
         
+            \begin{center}
+            \includegraphics[width=15cm]{ExempleQPng}
+            \end{center}
         \subsubsection{Ordre sous-jacent}\label{subsub:QOrd}
-            \paragraph L'ordre est défini par le symbole $\prec$. Supposons que p et q sont deux points d'évènement. Alors on a $p \prec q \leftrightarrow (p\textsubscript{y} > q\textsubscript{y}) \vee (p\textsubscript{y} = q\textsubscript{y} \wedge p\textsubscript{x} < q\textsubscript{x})$.
-            \paragraph Le cas particulier des \emph{segments horizontaux} se gère sans ajout particulier. En effet, le point gauche du segment sera considéré comme devant celui de droite.
+            \paragraph{} L'ordre est défini par le symbole $\prec$. Supposons que p et q sont deux points d'évènement. Alors on a $p \prec q \leftrightarrow (p\textsubscript{y} > q\textsubscript{y}) \vee (p\textsubscript{y} = q\textsubscript{y} \wedge p\textsubscript{x} < q\textsubscript{x})$.
+            \paragraph{} Le cas particulier des \emph{segments horizontaux} se gère sans ajout particulier. En effet, le point gauche du segment sera considéré comme devant celui de droite.
         
     \subsection{Description de \mathscr{T}}\label{sub:mainTDesc}
         \subsubsection{Description}\label{subsub:TDesc}
         
         \subsubsection{Exemple}\label{subsub:TEx}
-        
+            \begin{center}
+            \includegraphics[width=15cm]{ExempleQPng}
+            \end{center}
         \subsubsection{Ordre sous-jacent}\label{subsub:TOrd}
 
 \section{Explication des algorithmes présentés}\label{sec:algos}
